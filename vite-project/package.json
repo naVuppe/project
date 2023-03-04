@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . 测试 --platform win32 --arch x64"
+  },
+  "devDependencies": {
+    "electron": "^23.1.2",
+    "electron-installer-windows": "^3.0.0",
+    "electron-packager": "^17.1.1"
+  }
+}
