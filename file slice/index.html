@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="file" />
+    <script>
+        const input = document.querySelector('input');
+        input.onchange = (e) => {
+            const file = input.files[0];
+            if (!file) return
+            const fileOne = createFileClice(file, 1);
+            console.log(fileOne);
+        };
+        function createFileClice (file, size) {
+            const fileList = [];
+            for (let i = 0; i < file.size; i += size) {
+                fileList.push(file.slice(i, i + size));
+            }
+            return fileList
+        }
+    </script>
+</body>
+
+</html>
